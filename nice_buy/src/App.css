@@ -48,13 +48,31 @@
   font-size: large;
 }
 
-.input-nome {
+.input-orcamento{
   grid-row-start: 2;
   grid-row-end: 3;
 }
 
+.input-nome {
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
 .input-preco {
-  grid-row-start: 5;
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
+
+.input-preferencia {
+  grid-row-start: 8;
+  grid-row-end: 10;
+}
+
+.input-area #orcamento {
+  height: 100%;
+  font-size: large;
+  grid-column-start: 3;
+  grid-column-end: 6;
 }
 
 .input-area #nome {
@@ -69,11 +87,17 @@
   grid-column-end: 5;
 }
 
+.input-preferencia #preferencia {
+  height: 100%;
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
 .input-area button {
   grid-column-start: 6;
   grid-column-end: 9;
-  grid-row-start: 5;
-  grid-row-end: 7;
+  grid-row-start: 8;
+  grid-row-end: 10;
 }
 
 .input-area label {

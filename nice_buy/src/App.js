@@ -7,9 +7,10 @@ function App() {
   const [preferencia, setPreferencia] = useState(1)
   const [product, setProduct] = useState([])
   const [orcamento, setOrcamento] = useState(0)
+  const [buyList, setBuyList] = useState([])
   
   const handleAdd = async() => {
-    await setProduct( previus => [...previus, [name, preco, preferencia]] )
+    await setProduct( previus => [...previus, [name, Number(preco), Number(preferencia)]] )
     setPreferencia(1)
   }
 
@@ -44,6 +45,20 @@ function App() {
     return listOptions
   }
 
+  const greed = async() => {
+    await product.sort(function (a,b){
+      return a[1]/a[2]-b[1]/b[2]
+    });
+    let total = orcamento;
+    await setBuyList([]);
+    for(var i = 0; i < product.length; i++){
+      if(total - product[i][1] >= 0){
+        total -= product[i][1];
+        await setBuyList(previus => [...previus, product[i]])
+      }
+    }
+  }
+
   return (
     <div>
       <header className="App-header"></header>
@@ -60,8 +75,9 @@ function App() {
             <select id="preferencia" className="input-preferencia" value={preferencia} onChange={(event)=>{setPreferencia(event.target.value)}}>
               <ListOptions></ListOptions>
             </select>
-            <button onClickCapture={ handleAdd } >Adicionar</button>
+            <button onClick={ handleAdd } >Adicionar</button>
           </div>
+          {/* <button onClick={ greed }> Resultado </button> */}
           <div className="show-bar">
           </div>
         </div>

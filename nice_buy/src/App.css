@@ -194,3 +194,22 @@ table {
   margin-top: 1em;
   text-align: justify;
 }
+
+.limpar {
+  margin-top: 2em;
+  padding: 10px;
+  background-color: black;
+  color: green;
+  /* align-self: right; */
+}
+
+.colorRet {
+  border: 1px solid black;
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+}
+
+.color {
+  padding: 0;
+}

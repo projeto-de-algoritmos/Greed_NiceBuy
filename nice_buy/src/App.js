@@ -21,16 +21,24 @@ function App() {
         <td className="tableName">{product[0]}</td>
         <td className="tablePreco">{product[1]}</td>
         <td className="tablePref">{product[2]}</td>
+        <td className="color">
+          <div className="colorRet" style={{backgroundColor:product[3]}}></div>
+        </td>
       </tr>
     );
     return(
       <table>
-        <tr>
-          <th className="tableName">Nome</th>
-          <th className="tablePreco">Preço (R$)</th>
-          <th className="tablePref">Preferência</th>
-        </tr>
-        {listItems}
+        <thead>
+          <tr>
+            <th className="tableName">Nome</th>
+            <th className="tablePreco">Preço (R$)</th>
+            <th className="tablePref">Preferência</th>
+            <th className="color">Cor</th>
+          </tr>
+        </thead>
+        <tbody>
+          {listItems}
+        </tbody>
       </table>
     );
   }
@@ -81,6 +89,14 @@ function App() {
     return parts;
   }
 
+  const setDefaults = async() => {
+    await setName('default');
+    await setPreco(999);
+    await setPreferencia(1);
+    await setProduct([]);
+    await setBuyList([]);
+  }
+
   return (
     <div>
       <header className="App-header">Nice Buy</header>
@@ -109,6 +125,7 @@ function App() {
           Após clicar no botão Resultado, passe o mouse por cima das 
           partes coloridas para saber o nome do item.
           </div>
+          <button className="limpar" onClick={setDefaults}>Limpar tudo</button>
         </div>
         <div className="divider">
           <div className="show-items">

@@ -1,7 +1,11 @@
 :root {
-  --background-color-header: #89FA8A;
-  --background-color-default: #D4F9D5;
+  --background-color-header: #26AD26;
+  --background-color-default: aquamarine;
   --content-height: calc(100vh * 10 / 100);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .App-header {
@@ -11,8 +15,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: calc(10px + 2vmin);
-  color: white;
+  font-weight: bold;
+  color: black;
 }
 
 .App-body {
@@ -24,21 +30,24 @@
 }
 
 .divider {
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   min-height: 100%;
   min-width: 500px;
   width: 50%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-content: flex-start;
 }
 
 .input-area {
+  padding-top: 10px;
   background-color: cadetblue;
   height: 10em;
   width: 90%;
   margin-top: 0.5em;
   display: grid;
+  border: 5px solid black;
   grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
   grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
 }
@@ -49,7 +58,7 @@
 }
 
 .input-orcamento{
-  grid-row-start: 2;
+  grid-row-start: 1;
   grid-row-end: 3;
 }
 
@@ -110,14 +119,78 @@
 }
 
 .show-items {
-  background-color: red;
-  height: 98%;
+  background-color: #aaa;
+  border: 3px solid black;
+  min-height: 96%;
   width: 90%;
   margin-top: 0.5em;
 }
 
-.show-bar{
-  background-color: black;
-  height: 60%;
+table, td, th {
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 5px;
+}
+
+table {
+  width: 100%;
+  border-top: 1px solid black;
+  border-collapse: collapse;
+}
+
+.tableName{
+  text-align: left;
+  width: 60%;
+}
+
+.tablePreco {
+  text-align: center;
+  width: 20%;
+}
+
+.tablePref {
+  text-align: center;
+}
+
+.result {
+  margin-top: 2em;
+  padding: 10px;
+  /* max-height: 40px; */
+}
+
+.show-bar {
+  background-color: white;
+  height: 5em;
   width: 90%;
+  margin-top: 2em;
+  border: 1em solid black;
+  display: flex;
+}
+
+.itemBar {
+  position: relative;
+  display: inline-block;
+}
+
+.whichItem {
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  padding: 10px 10px;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  font-size: 1.2em;
+  font-weight: 500;
+  width: max-content;
+}
+
+.itemBar:hover .whichItem {
+  visibility: visible;
+}
+
+.helpText {
+  width: 90%;
+  margin-top: 1em;
+  text-align: justify;
 }

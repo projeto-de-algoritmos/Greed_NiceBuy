@@ -8,9 +8,9 @@ function App() {
   const [product, setProduct] = useState([])
   const [orcamento, setOrcamento] = useState(0)
   const [buyList, setBuyList] = useState([])
-  
+
   const handleAdd = async() => {
-    await setProduct( previus => [...previus, [name, Number(preco), Number(preferencia)]] )
+    await setProduct( previus => [...previus, [name, Number(preco), Number(preferencia), generateRandomColor()]] )
     setPreferencia(1)
   }
 
@@ -18,17 +18,17 @@ function App() {
     const list = props.list;
     const listItems = list.map((product) => 
       <tr>
-        <td>{product[0]}</td>
-        <td>{product[1]}</td>
-        <td>{product[2]}</td>
+        <td className="tableName">{product[0]}</td>
+        <td className="tablePreco">{product[1]}</td>
+        <td className="tablePref">{product[2]}</td>
       </tr>
     );
     return(
       <table>
         <tr>
-          <th>Nome</th>
-          <th>Preço (R$)</th>
-          <th>Preferência</th>
+          <th className="tableName">Nome</th>
+          <th className="tablePreco">Preço (R$)</th>
+          <th className="tablePref">Preferência</th>
         </tr>
         {listItems}
       </table>
@@ -59,9 +59,31 @@ function App() {
     }
   }
 
+  function generateRandomColor() {
+    return '#'+Math.floor(Math.random()*16777215).toString(16);
+  }
+
+  function ShowBar(props) {
+    let products = props.list;
+    let total = props.orcamento;
+    let parts = products.map((product) => {
+      var barStyle = {
+        height: 100 + '%',
+        width: Math.floor(product[1] / total * 100) + '%',
+        backgroundColor: product[3]
+      }
+      return (
+        <div className="itemBar" style={barStyle}>
+          <spam className="whichItem">{product[0]}</spam>
+        </div>
+      );
+    });
+    return parts;
+  }
+
   return (
     <div>
-      <header className="App-header"></header>
+      <header className="App-header">Nice Buy</header>
       <div className="App-body">
         <div className="divider">
           <div className="input-area">
@@ -77,8 +99,15 @@ function App() {
             </select>
             <button onClick={ handleAdd } >Adicionar</button>
           </div>
-          {/* <button onClick={ greed }> Resultado </button> */}
+          <button onClick={ greed } className="result"> Resultado </button>
           <div className="show-bar">
+            <ShowBar list={buyList} orcamento={orcamento}/>
+          </div>
+          <div className="helpText">
+          A barra acima é preenchida com os itens da tabela que cabem no orçamento
+          rankeados a partir do peso (Preço/Preferência).
+          Após clicar no botão Resultado, passe o mouse por cima das 
+          partes coloridas para saber o nome do item.
           </div>
         </div>
         <div className="divider">

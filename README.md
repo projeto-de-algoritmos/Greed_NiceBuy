@@ -16,7 +16,12 @@ Dada uma lista de itens de compra que contém os nomes, preço, e preferência p
 O algoritmo ordena em ordem crescente os itens de acordo com a operação Preço/Preferência, e aloca para a compra os itens que cabem no orçamento.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+
+![Estado inicial](./assets/print01.png)
+
+![Tabela preenchida](./assets/print02.png)
+
+![Resultado](./assets/print03.png)
 
 ## Instalação 
 **Linguagem**: JavaScript<br>

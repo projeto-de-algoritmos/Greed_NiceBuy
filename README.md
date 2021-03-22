@@ -25,13 +25,13 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 Primeiro, faça o download dos arquivos na sua máquina com:
 
 ```
-$ git clone https://github.com/projeto-de-algoritmos/Greed_Nice_buy.git
+$ git clone https://github.com/projeto-de-algoritmos/Greed_NiceBuy.git
 ```
 
 Após isso vá para a pasta app do projeto com:
 
 ```
-$ cd Greed_Nice_buy/nice_buy
+$ cd Greed_NiceBuy/nice_buy
 ```
 
 Agora é só instalar as dependências com o seguinte comando:

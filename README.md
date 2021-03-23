@@ -33,7 +33,7 @@ Primeiro, faça o download dos arquivos na sua máquina com:
 $ git clone https://github.com/projeto-de-algoritmos/Greed_NiceBuy.git
 ```
 
-Após isso vá para a pasta app do projeto com:
+Após isso vá para a pasta nice_buy, onde se encontram os arquivos para execução do projeto com:
 
 ```
 $ cd Greed_NiceBuy/nice_buy

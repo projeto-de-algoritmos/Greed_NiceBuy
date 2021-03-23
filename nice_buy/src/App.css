@@ -1,0 +1,215 @@
+:root {
+  --background-color-header: #26AD26;
+  --background-color-default: aquamarine;
+  --content-height: calc(100vh * 10 / 100);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.App-header {
+  background-color: var(--background-color-header);
+  min-height: var(--content-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: calc(10px + 2vmin);
+  font-weight: bold;
+  color: black;
+}
+
+.App-body {
+  background-color: var(--background-color-default);
+  min-height: calc(100vh * 90 / 100);
+  min-width: min-content;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.divider {
+  /* background-color: aquamarine; */
+  min-height: 100%;
+  min-width: 500px;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.input-area {
+  padding-top: 10px;
+  background-color: cadetblue;
+  height: 10em;
+  width: 90%;
+  margin-top: 0.5em;
+  display: grid;
+  border: 5px solid black;
+  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+}
+
+.input-area input {
+  height: 100%;
+  font-size: large;
+}
+
+.input-orcamento{
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.input-nome {
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+.input-preco {
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
+
+.input-preferencia {
+  grid-row-start: 8;
+  grid-row-end: 10;
+}
+
+.input-area #orcamento {
+  height: 100%;
+  font-size: large;
+  grid-column-start: 3;
+  grid-column-end: 6;
+}
+
+.input-area #nome {
+  height: 100%;
+  font-size: large;
+  grid-column-start: 3;
+  grid-column-end: 10;
+}
+
+.input-area #preco {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.input-preferencia #preferencia {
+  height: 100%;
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.input-area button {
+  grid-column-start: 6;
+  grid-column-end: 9;
+  grid-row-start: 8;
+  grid-row-end: 10;
+}
+
+.input-area label {
+  justify-content: center;
+  text-align: center;
+  padding-top: 5%;
+  font-size: large;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.show-items {
+  background-color: #aaa;
+  border: 3px solid black;
+  min-height: 96%;
+  width: 90%;
+  margin-top: 0.5em;
+}
+
+table, td, th {
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 5px;
+}
+
+table {
+  width: 100%;
+  border-top: 1px solid black;
+  border-collapse: collapse;
+}
+
+.tableName{
+  text-align: left;
+  width: 60%;
+}
+
+.tablePreco {
+  text-align: center;
+  width: 20%;
+}
+
+.tablePref {
+  text-align: center;
+}
+
+.result {
+  margin-top: 2em;
+  padding: 10px;
+  /* max-height: 40px; */
+}
+
+.show-bar {
+  background-color: white;
+  height: 5em;
+  width: 90%;
+  margin-top: 2em;
+  border: 1em solid black;
+  display: flex;
+}
+
+.itemBar {
+  position: relative;
+  display: inline-block;
+}
+
+.whichItem {
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  padding: 10px 10px;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  font-size: 1.2em;
+  font-weight: 500;
+  width: max-content;
+}
+
+.itemBar:hover .whichItem {
+  visibility: visible;
+}
+
+.helpText {
+  width: 90%;
+  margin-top: 1em;
+  text-align: justify;
+}
+
+.limpar {
+  margin-top: 2em;
+  padding: 10px;
+  background-color: black;
+  color: green;
+  /* align-self: right; */
+}
+
+.colorRet {
+  border: 1px solid black;
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+}
+
+.color {
+  padding: 0;
+}

@@ -1,4 +1,4 @@
-# NomedoProjeto
+# NiceBuy
 
 **Número da Lista**: 7<br>
 **Conteúdo da Disciplina**: Greed<br>
@@ -10,21 +10,49 @@
 | 18/0029177  | Wagner Martins da Cunha |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+
+Dada uma lista de itens de compra que contém os nomes, preço, e preferência para cada item, e um orçamento para essas compras, o NiceBuy identifica quais itens devem ser comprados de forma a aumentar a satisfação do usuário.
+
+O algoritmo ordena em ordem crescente os itens de acordo com a operação Preço/Preferência, e aloca para a compra os itens que cabem no orçamento.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+
+![Estado inicial](./assets/print01.png)
+
+![Tabela preenchida](./assets/print02.png)
+
+![Resultado](./assets/print03.png)
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: JavaScript<br>
+**Framework**: React<br>
+
+Primeiro, faça o download dos arquivos na sua máquina com:
+
+```
+$ git clone https://github.com/projeto-de-algoritmos/Greed_NiceBuy.git
+```
+
+Após isso vá para a pasta app do projeto com:
+
+```
+$ cd Greed_NiceBuy/nice_buy
+```
+
+Agora é só instalar as dependências com o seguinte comando:
+
+```
+$ npm install
+```
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
 
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+Para rodar o projeto, após sua instalação, basta realizar este comando:
+
+```
+$ npm start
+```
+
 
 
 
